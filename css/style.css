@@ -139,6 +139,11 @@
       width: 100%;
       height: auto;
       line-height: 0; }
+
+      .terrarium {
+      height: 20rem;
+      /* object-fit: cover; */
+      }
     .item-text {
       position: absolute;
       top: 0;
