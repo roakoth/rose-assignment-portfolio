@@ -137,13 +137,10 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: auto;
-      line-height: 0; }
+      height: 100%;
+     line-height: 0;  
+    }
 
-      .terrarium {
-      height: 20rem;
-      /* object-fit: cover; */
-      }
     .item-text {
       position: absolute;
       top: 0;
@@ -223,7 +220,7 @@
         border-color: #ffbc00; }
   
   #header-home {
-    background: url("../img/showcase.jpg") no-repeat center right/cover;
+    background: url("https://a.storyblok.com/f/175202/1920x1279/e23f1e1196/showcase.jpeg/m/") no-repeat center right/cover;
     height: 100vh;
     color: #fff; }
     #header-home .header-content {
@@ -253,8 +250,6 @@
     grid-template-areas: "bioimage bio bio"
    "aw1 aw2 aw3";
     grid-gap: 1.2rem; }
-    #about-a .about-info img {
-      height: 380px; }
   
   .about-a .bio-image {
     grid-area: bioimage; }
