@@ -20,10 +20,11 @@
   </head>
   <body>
     <!-- Header-->
-    <header id="header-home">
-      <div class="container">
-        <nav id="main-nav">
+     <header id="header-home"> 
+      <!-- <div class="container"> -->
+        <div id="navbar" class="navbar top">
           <h1>Roselida</h1>
+        <nav> 
           <ul>
             <li><a href="index.html" class="current">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -31,7 +32,8 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-
+        </div>
+        <div class="container">
         <div class="header-content">
           <h1>
             I Am Roselida The
@@ -247,7 +249,43 @@
         </div>
       </div>
     </footer>
+    <script>
+  const navbar = document.getElementById("navbar");
+      let scrolled = false;
 
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+
+      //smooth scrolling
+      $("#navbar a, .btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });    
+      
+      </script>
     <!--Type Effect Tutorial: https://www.youtube.com/watch?v=POX3dt-pB4E -->
     <script src="js/typewriter.js"></script>
   </body>
